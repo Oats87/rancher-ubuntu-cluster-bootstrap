@@ -1,0 +1,7 @@
+aws_access_key = "<REDACTED>"
+aws_secret_key = "<REDACTED>"
+prefix = "myk8scluster"
+region = "us-west-2"
+type = "t2.medium"
+ssh_key_name = "my-k8s-ssh-keyname"
+vpc_id = "vpc-for-creating-sg"
