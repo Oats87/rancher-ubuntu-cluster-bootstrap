@@ -170,7 +170,7 @@ data "template_cloudinit_config" "ranchermgmt_cloudinit" {
 
   part {
     content_type = "text/x-shellscript"
-    content      = "#!/bin/sh\ndocker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run rancher/rancher-agent:v2.0.7 --server ${var.rancher_server} --token ${var.rancher_token} --address awspublic --internal-address awslocal --etcd --controlplane"
+    content      = "#!/bin/sh\ndocker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run rancher/rancher-agent:v2.1.1 --server ${var.rancher_server} --token ${var.rancher_token} --address awspublic --internal-address awslocal --etcd --controlplane"
   }
 }
 
@@ -203,7 +203,7 @@ data "template_cloudinit_config" "rancherwrk_cloudinit" {
 
   part {
     content_type = "text/x-shellscript"
-    content      = "#!/bin/sh\ndocker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run rancher/rancher-agent:v2.0.7 --server ${var.rancher_server} --token ${var.rancher_token} --address awspublic --internal-address awslocal --worker"
+    content      = "#!/bin/sh\ndocker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run rancher/rancher-agent:v2.1.1 --server ${var.rancher_server} --token ${var.rancher_token} --address awspublic --internal-address awslocal --worker"
   }
 }
 
